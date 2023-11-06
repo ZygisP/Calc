@@ -208,6 +208,21 @@ const button_clear = () =>
     window.location.reload();
 };
 
+// CE mygtukas
+const clear_entry = () =>
+{
+    displayed_num = document.getElementById("box");
+
+    if (nums.length > 0 && typeof last_operator !== "undefined")
+    {
+        displayed_num.innerText = "0";
+        const temp = nums[0];
+        nums = [];
+        nums.push(temp);
+        firstNum = true;
+    }
+};
+
 // Backspace mygtukas
 const backspace_click = () =>
 {
@@ -226,6 +241,24 @@ const backspace_click = () =>
     }
 };
 
+// Kvadratine saknis
+const square_root = () =>
+{
+    displayed_num = document.getElementById("box");
+    const square_num = Math.sqrt(displayed_num.innerText);
+    displayed_num.innerText = square_num;
+    nums.push(square_num);
+};
+
+// kelimas laipsniu
+const power_of = () =>
+{
+    displayed_num = document.getElementById("box");
+    const square_num = Math.pow(displayed_num.innerText, 2);
+    displayed_num.innerText = square_num;
+    nums.push(square_num);
+};
+// PAPILDOMA LOGIKA
 // +- operacija
 const plus_minus = () =>
 {
@@ -271,29 +304,11 @@ const plus_minus = () =>
     displayed_num.innerText = -displayed_num.innerText;
 };
 
-// Kvadratine saknis
-const square_root = () =>
-{
-    displayed_num = document.getElementById("box");
-    const square_num = Math.sqrt(displayed_num.innerText);
-    displayed_num.innerText = square_num;
-    nums.push(square_num);
-};
-
 // 1/x operacija
 const division_one = () =>
 {
     displayed_num = document.getElementById("box");
     const square_num = 1 / displayed_num.innerText;
-    displayed_num.innerText = square_num;
-    nums.push(square_num);
-};
-
-// kelimas laipsniu
-const power_of = () =>
-{
-    displayed_num = document.getElementById("box");
-    const square_num = Math.pow(displayed_num.innerText, 2);
     displayed_num.innerText = square_num;
     nums.push(square_num);
 };
@@ -327,21 +342,6 @@ const percentage_calc = () =>
     const res = calculate(nums[0], nums[1], last_operator);
     displayed_num.innerText = res;
     operator_value = "=";
-};
-
-// CE mygtukas
-const clear_entry = () =>
-{
-    displayed_num = document.getElementById("box");
-
-    if (nums.length > 0 && typeof last_operator !== "undefined")
-    {
-        displayed_num.innerText = "0";
-        const temp = nums[0];
-        nums = [];
-        nums.push(temp);
-        firstNum = true;
-    }
 };
 
 // Keyboard input logika. Skaičiuotuvas veikia spaudžiant klaviatūros mygtukus
