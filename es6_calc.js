@@ -157,6 +157,7 @@ const get_btn_num = (button) =>
     }
 };
 
+// Nustatomas operatorius
 const showSelectedOperator = () =>
 {
     const elements = document.getElementsByClassName("operator");
@@ -183,6 +184,7 @@ const showSelectedOperator = () =>
     }
 };
 
+// Apskaiciuojama suma
 const calculate = (num1, num2, operator) =>
 {
     switch (operator)
@@ -200,11 +202,13 @@ const calculate = (num1, num2, operator) =>
     }
 };
 
+// C mygtukas, perkrauna puslapį
 const button_clear = () =>
 {
     window.location.reload();
 };
 
+// Backspace mygtukas
 const backspace_click = () =>
 {
     displayed_num = document.getElementById("box");
@@ -222,6 +226,7 @@ const backspace_click = () =>
     }
 };
 
+// +- operacija
 const plus_minus = () =>
 {
     displayed_num = document.getElementById("box");
@@ -266,6 +271,7 @@ const plus_minus = () =>
     displayed_num.innerText = -displayed_num.innerText;
 };
 
+// Kvadratine saknis
 const square_root = () =>
 {
     displayed_num = document.getElementById("box");
@@ -274,6 +280,7 @@ const square_root = () =>
     nums.push(square_num);
 };
 
+// 1/x operacija
 const division_one = () =>
 {
     displayed_num = document.getElementById("box");
@@ -282,6 +289,7 @@ const division_one = () =>
     nums.push(square_num);
 };
 
+// kelimas laipsniu
 const power_of = () =>
 {
     displayed_num = document.getElementById("box");
@@ -290,6 +298,7 @@ const power_of = () =>
     nums.push(square_num);
 };
 
+// procentų skaičiavimas
 const percentage_calc = () =>
 {
     const elements = document.getElementsByClassName("operator");
@@ -320,6 +329,7 @@ const percentage_calc = () =>
     operator_value = "=";
 };
 
+// CE mygtukas
 const clear_entry = () =>
 {
     displayed_num = document.getElementById("box");
@@ -334,6 +344,7 @@ const clear_entry = () =>
     }
 };
 
+// Keyboard input logika. Skaičiuotuvas veikia spaudžiant klaviatūros mygtukus
 const keyPressed = (e) =>
 {
     e.preventDefault();
@@ -384,6 +395,7 @@ const keyPressed = (e) =>
     }
 };
 
+// Copy and Paste logika
 const keyReleased = (e) =>
 {
     if (key_combination['ControlLeft'] && key_combination['KeyV'])
