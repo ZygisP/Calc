@@ -1,0 +1,95 @@
+body {
+    font-size: 2.2vh;
+    top: 15%;
+    left: 40%;
+    margin: 0 auto;
+    background-color: darkgrey;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+#calculator {
+    width: auto;
+    height: auto;
+    padding: 1.5vh;
+    border: 5px solid #000000;
+    border-radius: 15px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+}
+
+.box {
+    text-align: right;
+    font-size: 2.8vh;
+    height: 3vh;
+    line-height: 3vh;
+    padding: 1em;
+    border: 2px solid #0017e6;
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+}
+
+#last_operation_history {
+    height: 1.8vh;
+    font-size: 1.8vh;
+    text-align: right;
+    padding-right: 1.5vh;
+    color: rgb(177, 176, 176);
+    background-color: black;
+}
+
+button {
+    width: 7vh;
+    height: 7vh;
+    font-weight: bold;
+    font-size: 2.5vh;
+    color: white;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    margin: 0.2vh;
+}
+
+.operator {
+    width: 7vh;
+    height: 7vh;
+    background-color: #2600e6;
+    border-radius: 50%;
+    margin: 0.2vh;
+}
+
+#backspace_btn {
+    background-image: url("./backspace-reverse.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 1.7em;
+}
+
+button:hover {
+    background-color: #999999;
+    cursor: pointer;
+}
+
+.operator {
+    background-color: #2600e6;
+}
+
+.operator:hover {
+    background-color: #989898;
+}
+
+#equal_sign {
+    width: 100%;
+    border-radius: 15px;
+}
